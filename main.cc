@@ -91,8 +91,7 @@ public:
                     tiles[r][last] += tiles[r][c];
                     merged = true;
                 } else {
-                    last++;
-                    tiles[r][last] = tiles[r][c];
+                    tiles[r][++last] = tiles[r][c];
                     merged = false;
                 }
             }
@@ -110,8 +109,7 @@ public:
                     tiles[r][last] += tiles[r][c];
                     merged = true;
                 } else {
-                    last--;
-                    tiles[r][last] = tiles[r][c];
+                    tiles[r][--last] = tiles[r][c];
                     merged = false;
                 }
             }
@@ -129,8 +127,7 @@ public:
                     tiles[last][c] += tiles[r][c];
                     merged = true;
                 } else {
-                    last++;
-                    tiles[last][c] = tiles[r][c];
+                    tiles[++last][c] = tiles[r][c];
                     merged = false;
                 }
             }
@@ -148,8 +145,7 @@ public:
                     tiles[last][c] += tiles[r][c];
                     merged = true;
                 } else {
-                    last--;
-                    tiles[last][c] = tiles[r][c];
+                    tiles[--last][c] = tiles[r][c];
                     merged = false;
                 }
             }
